@@ -1,0 +1,351 @@
+/*Javascript에서 className 부여로 요소를 숨기기 위함*/
+.hidden 
+{
+    display: none;
+}
+
+*{
+    box-sizing: border-box;
+  
+}
+
+@font-face {
+    font-family: 'Cafe24Ssurround';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24Ssurround.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GangwonEduPowerExtraBoldA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEduPowerExtraBoldA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'HSBombaram';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/HSBombaram.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*전체 글꼴과 배치?*/
+body{
+    padding-top:150px;
+    
+}
+
+/*배경이미지*/
+.background {
+    position:absolute;
+    left:0;
+    top:0;
+	max-width:100%;
+    min-width:100%;
+    max-height:1000px;
+    min-height:1000px;
+    z-index:-5;
+    filter: brightness(30%);
+}
+
+/*로그인 폼*/
+#login-form{
+    text-align:center;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+
+/*이름 넣는 부분*/
+#login-form input:first-child{
+    text-align: center;
+    color:white;
+    font-size:1.3rem;
+    padding: 10px;
+    width: 300px;
+    background-color:transparent;
+    transition: all, 0.4s;
+    border: none;
+    outline: none;
+    border-bottom: 3px solid floralwhite;
+    font-family: 'GmarketSansMedium';
+}
+
+#login-form input:first-child:hover {
+    letter-spacing: 2px;
+}
+
+#login-form input:first-child:active {
+    transform: scale(1.5);
+}
+
+/*로그인 버튼*/
+#login-form input:last-child{
+    text-align: center;
+    color:white;
+    font-size:1.3rem;
+    padding: 10px;
+    width: 100px;
+    background-color:transparent;
+    transition: all, 0.4s;
+    border: none;
+    outline: none;
+    border-bottom: 3px solid floralwhite;
+    font-family: 'GmarketSansMedium';
+}
+
+#login-form input:last-child:hover {
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+
+#login-form input:last-child:active {
+    transform: scale(1.5);
+}
+
+
+/*헬로 땡땡 부분*/
+#greeting{
+    text-align: center;
+    color: white;
+    margin: 0 auto;
+    font-size: 3.8rem;
+    height: 90px;
+    font-family: 'GmarketSansMedium';
+}
+
+.main-clockday {
+    justify-content: flex-start;
+}
+
+
+/*시간*/
+#clock {
+    text-align: center;
+    color: white;
+    font-size:7.5rem;
+    margin: 0 auto;
+    letter-spacing: 8px;
+    font-family:'GangwonEduPowerExtraBoldA';
+}
+
+/*날짜*/
+#day {
+    text-align: center;
+    color: white;
+    font-size:3rem;
+    margin: 0 auto;
+    font-family:'GangwonEduPowerExtraBoldA';
+    margin-bottom: 30px;
+    letter-spacing: 5px;
+}
+
+#todo-form {
+    text-align: center;
+}
+
+/*할 일 적는 곳*/
+#todo-form input{
+    text-align: center;
+    color:white;
+    font-size:1.3rem;
+    padding: 10px;
+    display:inline-block;
+    width: 50%;
+    background-color:transparent;
+    transition: all, 0.4s;
+    border: none;
+    outline: none;
+    border-bottom: 3px solid floralwhite;
+    font-family: 'GmarketSansMedium';
+}
+#todo-form input:hover {
+    letter-spacing: 2px;
+
+}
+
+#todo-form input:active {
+    transform: scale(1.5);
+}
+
+/*할 일 목록*/
+#todo-list 
+{
+    text-align: center;
+    overflow-y: auto;
+    height: 250px;
+    width: 900px;
+    margin-left: auto;
+    margin-right: auto;  
+    background-color: rgba(197, 198, 202, 0.24);
+    border-radius: 20px;
+    font-family: 'GmarketSansMedium';
+}
+
+#todo-list li{
+    list-style: none;
+    color:rgb(228, 228, 228) ;
+    font-size: 1.5rem;
+}
+
+#todo-list li:hover {
+    text-decoration: underline
+}
+/*::-webkit-scrollbar-track 스크롤바 뒷 배경에 대한 설정*/
+#todo-list::-webkit-scrollbar-track
+{
+  -webkit-box-shadow: inset 0 0 6px rgba(255, 246, 246, 0.3);
+  border-radius: 20px;
+  background: rgb(212, 211, 211);
+}
+
+/*::-webkit-scrollbar 스크롤바 전체 영역에 대한 설정*/
+#todo-list::-webkit-scrollbar
+{
+  width: 12px;
+  background: transparent;
+}
+
+/*::-webkit-scrollbar-thumb 스크롤바 막대에 대한 설정*/
+#todo-list::-webkit-scrollbar-thumb
+{
+  border-radius: 20px;
+  -webkit-box-shadow: inset 0 0 6px rgba(32, 30, 30, 0.3);
+  background-color: #555;
+  background-clip: padding-box;
+  border: 2px solid transparent;
+}
+
+/*삭제 버튼*/
+.deleteBtn {
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.25s;
+    background-color:transparent;
+    color: #1e6b7b;
+    border: none;
+}
+
+.deleteBtn:hover {
+    letter-spacing: 2px;
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.deleteBtn:active {
+    transform: scale(1.5);
+}
+
+/*명언*/
+#quote 
+{   
+    text-align: center;
+    color: rgba(255, 255, 255, 0.712);
+    vertical-align: bottom;
+    height: 3.125rem;
+    line-height: 3rem;
+    position: relative;
+    overflow: hidden; 
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#quote span {
+    position: absolute;
+    top: 0;
+    animation: slide 60s infinite;  
+  }
+
+  @keyframes slide {
+    0%{
+      top:0;
+    }
+    10%{
+      top: -3rem;    
+    }
+    20%{
+      top: -6rem;
+    }
+    30%{
+      top: -9rem;
+    }
+    40%{
+      top: -12rem;
+    }
+    50%{
+        top: -15rem;
+      }
+      60%{
+        top: -18rem;
+      }
+      70%{
+        top: -21rem;
+      }
+      80%{
+        top: -24rem;
+      }
+      90%{
+        top: -27rem;
+      }
+      100%{
+        top: 0rem;
+      }
+  }
+
+
+  
+.footer {
+    margin-top: 50px;
+    bottom: 0;
+    width: 100%;
+    font-size: 1.2rem;
+}
+
+/*날씨*/
+
+
+#weather {
+    color: white;
+    position: absolute;
+    top: 5px;
+    right: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    cursor: pointer;
+    font-family: 'GmarketSansMedium';
+  }
+  
+  #weather li:first-child {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+ 

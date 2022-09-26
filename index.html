@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>ToDoList</title>
+</head>
+<body>
+<main>
+    
+    <form id = "login-form" class="hidden">
+        <input 
+        required
+        maxlength = "15"
+        type="text" 
+        placeholder="이름을 입력해주세요." />
+        <input type="submit" value="Log In" />
+    </form>
+
+        <h1 id="greeting" class="hidden"></h1>
+    <div class="main-clockday">
+        <h2 id="clock">00:00:00</h2>
+        <h2 id="day">0000/00/00</h2>
+    </div>
+
+
+    
+    <form id="todo-form">
+        <input type="text" placeholder="오늘 할 일을 적고, 엔터를 누르세요." />
+    </form>
+    <ul id="todo-list"></ul>
+</main>
+<footer class="footer">    
+    <div id="quote">
+        <span id="rolltext">
+            'I never dreamed about success, I worked for it' | Estee Lauder<br/>
+            'Do not try to be original, just try to be good.' | Paul Rand<br/>
+            ’Do not be afraid to give up the good to go for the great' | John D. Rockefeller<br/>
+            ‘If you cannot fly then run. If you cannot run, then walk. And if you cannot walk, then crawl, but whatever you do, you have to keep moving forward.' | Martin Luther King Jr.<br/>
+            'Our greatest weakness lies in giving up. The most certain way to succeed is always to try just one more time.' | Thomas Edison<br/>
+            'The fastest way to change yourself is to hang out with people who are already the way you want to be' | REid Hoffman<br/>
+            'Money is like gasoline during a road trip. You do not want to run out of gas on your trip, but you are not doing a tour of gas stations' | Tim O Reilly<br/>
+            'Some people dream of success, while other people get up every morning and make it happen' | Wayne Huizenga<br/>
+            'The only thing worse than starting something and falling.. is not starting something' | SEth Godin <br/>
+            'If you really want to do something, you will find a way. If you do not, you will find an excuse.' | Jim Rohn<br/>
+
+        </div>
+
+</footer>
+<div id="weather">
+    <span></span>
+    <span></span>
+</div>
+
+    <script src="js/greetings.js"></script>
+    <script src="js/clock.js"></script>
+ 
+    <script src="js/background.js"></script>
+    <script src="js/todo.js"></script>
+    <script src="js/weather.js"></script>
+    <script type="text/javascript" src="apikey.js"></script> 
+</body>
+</html>
